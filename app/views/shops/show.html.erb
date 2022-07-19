@@ -3,7 +3,7 @@
   <li>
     <% @shop.opening_hours.where(day: "Monday").each do |opening_hour| %>
       <%#= opening_hour.day %>
-      <%= opening_hour.starts_at.hour %>-<%= opening_hour.ends_at.hour %>
+      <%= opening_hour.starts_at %>-<%= opening_hour.ends_at %>
     <% end %>
   </li>
   <li>
@@ -25,9 +25,10 @@
     <% end %>
   </li>
   <li>
+    <p>Friday</p>
     <% @shop.opening_hours.where(day: "Friday").each do |opening_hour| %>
-      <%= opening_hour.day %>
-      <%= opening_hour.starts_at.to_s %>
+      <%#= opening_hour.day %>
+      <%= opening_hour.starts_at.hour %>-<%= opening_hour.ends_at.hour %>
     <% end %>
   </li>
   <li>
