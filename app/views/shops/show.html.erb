@@ -1,8 +1,46 @@
 <p><strong>Opening Hours <%= @shop.name %></strong></p>
 <ul class="list-group">
-  <% @shop.opening_hours.each do |opening_hour| %>
-    <li class="list-group-item"> Horaires <%= opening_hour.day.today() %> <%= opening_hour.stars_at.first %>-<%= opening_hour.ends_at.first %>, <%= opening_hour.stars_at.last %>-<%= opening_hour.ends_at.last %></li>
-
-  <% end %>
+  <li>
+    <% @shop.opening_hours.where(day: "Monday").each do |opening_hour| %>
+      <%#= opening_hour.day %>
+      <%= opening_hour.starts_at.hour %>-<%= opening_hour.ends_at.hour %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Tuesday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Wednesday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Thursday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Friday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Saturday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
+  <li>
+    <% @shop.opening_hours.where(day: "Sunday").each do |opening_hour| %>
+      <%= opening_hour.day %>
+      <%= opening_hour.starts_at.to_s %>
+    <% end %>
+  </li>
 </ul>
 <br>
