@@ -1,0 +1,11 @@
+ <div>
+  <h4> Index de shop </h4>
+    <% @shops.each do |shop| %>
+      <h5> <%= link_to shop_path(shop) do %></h5>
+        <%= shop.name.upcase %>
+        <% shop.opening_hours.each do |opening_hour| %>
+          <%= opening_hour.day %>
+        <% end %>
+      <% end %>
+    <% end %>
+ </div>

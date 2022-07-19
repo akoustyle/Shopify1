@@ -1,0 +1,8 @@
+<p><strong>Opening Hours <%= @shop.name %></strong></p>
+<ul class="list-group">
+  <% @shop.opening_hours.each do |opening_hour| %>
+    <li class="list-group-item"> Horaires <%= opening_hour.day.today() %> <%= opening_hour.stars_at.first %>-<%= opening_hour.ends_at.first %>, <%= opening_hour.stars_at.last %>-<%= opening_hour.ends_at.last %></li>
+
+  <% end %>
+</ul>
+<br>
