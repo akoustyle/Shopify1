@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_19_143720) do
+ActiveRecord::Schema.define(version: 2022_07_20_002601) do
 
   create_table "opening_hours", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.string "day"
-    t.time "starts_at"
-    t.time "ends_at"
+    t.time "starts_am_at"
+    t.time "ends_am_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.time "starts_pm_at"
+    t.time "ends_pm_at"
     t.index ["shop_id"], name: "index_opening_hours_on_shop_id"
   end
 
