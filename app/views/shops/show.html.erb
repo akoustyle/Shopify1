@@ -1,13 +1,39 @@
 <div class="container">
+  <h4 style="color:black"><strong>Opening Hours <%= @shop.name %></strong></h4>
 </div>
-<p><strong>Opening Hours <%= @shop.name %></strong></p>
-<% OpeningHour.week_days_from_today.each do |day| %>
-  <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
-    <% if !opening_hour.closed? %>
-      <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
-    <% else%>
-      <%= opening_hour.day %> Closed
-    <% end %>
-  <% end %>
-<% end %>
+<div class="container" style="display:flex">
+  <div>
+    Horaires:
+  </div>
+  <div>
+      <% OpeningHour.week_days_from_today.each_with_index do |day, i| %>
+        <% if i == 0 %>
+        <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
+          <% if !opening_hour.closed? %>
+          <li style="list-style-type: none">
+            <span style="font-weight:bold"><%= opening_hour.day %>
+            <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></span>
+          </li>
+          <% else%>
+            <li style="list-style-type: none">
+              <span style="font-weight:bold"><%= opening_hour.day %> Closed </span>
+            </li>
+          <% end %>
+        <% end %>
+        <% else %>
+          <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
+            <% if !opening_hour.closed? %>
+            <li style="list-style-type: none">
+              <%= opening_hour.day %>
+              <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
+            </li>
+            <% else%>
+              <li style="list-style-type: none">
+                <%= opening_hour.day %> Closed
+              </li>
+            <% end %>
+          <% end %>
+        <% end %>
+
+      <% end %>
+</div>
