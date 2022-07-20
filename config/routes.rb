@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope '(:locale)', locale: /fr|es/ do
+  scope '(:locale)', locale: /fr|en/ do
     get 'opening_hours/new'
     root to: 'shops#index'
     # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
