@@ -12,8 +12,12 @@
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Tuesday").each do |opening_hour| %>
-      <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
+      <% if opening_hour.starts_am_at && opening_hour.starts_pm_at && opening_hour.ends_am_at && opening_hour.ends_pm_at == nil %>
+        <%= opening_hour.day %> <p>Closed</p>
+      <% else %>
+        <%= opening_hour.day %>
+        <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
+      <% end %>
     <% end %>
   </li>
   <li>
