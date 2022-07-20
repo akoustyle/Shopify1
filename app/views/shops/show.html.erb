@@ -2,9 +2,12 @@
 <ul class="list-group">
   <li>
     <% @shop.opening_hours.where(day: "Monday").each do |opening_hour| %>
-      <%= opening_hour.day %>
-      <%# <% if opening_hour %>
-      <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
+        <% if opening_hour.closed?%>
+          <%= opening_hour.day %> <p>Closed</p>
+        <% else %>
+          <%= opening_hour.day %>
+          <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
+        <% end %>
     <% end %>
   </li>
   <li>
