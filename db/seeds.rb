@@ -62,6 +62,7 @@ OpeningHour.create(shop_id: shop1.id, day: "Wednesday", starts_am_at: "10:00", e
 OpeningHour.create(shop_id: shop1.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
 OpeningHour.create(shop_id: shop1.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
 OpeningHour.create(shop_id: shop1.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
+OpeningHour.create(shop_id: shop1.id, day: "Sunday", closed: true)
 # OpeningHour.create(shop_id: shop1.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00")
 # OpeningHour.create(shop_id: shop1.id, day: "Sunday", starts_am_at: "14:00", ends_am_at: "22:00")
 puts "Opening & closing hours for #{shop1.name} done!"
@@ -73,12 +74,14 @@ OpeningHour.create(shop_id: shop2.id, day: "Wednesday", starts_am_at: "10:00", e
 OpeningHour.create(shop_id: shop2.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
 OpeningHour.create(shop_id: shop2.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
 OpeningHour.create(shop_id: shop2.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
+OpeningHour.create(shop_id: shop2.id, day: "Sunday", closed: true)
 # OpeningHour.create(shop_id: shop2.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00")
   puts "Opening & closing hours for #{shop2.name} done!"
 
   puts "Opening hour for #{shop3.name}"
   # OpeningHour.create(shop_id: shop3.id, day: "Monday", starts_am_at: "10:00", ends_am_at: "13:00")
   # OpeningHour.create(shop_id: shop3.id, day: "Monday", starts_am_at: "14:00", ends_am_at: "22:00")
+  OpeningHour.create(shop_id: shop3.id, day: "Monday", closed: true)
   OpeningHour.create(shop_id: shop3.id, day: "Tuesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop3.id, day: "Wednesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop3.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
@@ -91,10 +94,12 @@ puts "Opening hour for #{shop4.name}"
   OpeningHour.create(shop_id: shop4.id, day: "Monday", starts_am_at: "11:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "21:00")
   OpeningHour.create(shop_id: shop4.id, day: "Tuesday", starts_am_at: "11:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "21:00")
   # OpeningHour.create(shop_id: shop4.id, day: "Wednesday", starts_am_at: "11:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop4.id, day: "Wednesday", closed: true)
   OpeningHour.create(shop_id: shop4.id, day: "Thursday", starts_am_at: "11:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "21:00")
   OpeningHour.create(shop_id: shop4.id, day: "Friday", starts_am_at: "11:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "21:00")
   OpeningHour.create(shop_id: shop4.id, day: "Saturday", starts_am_at: "11:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "21:00")
   # OpeningHour.create(shop_id: shop4.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop4.id, day: "Sunday", closed: true)
 puts "Opening & closing hours for #{shop4.name} done!"
 
 puts "Opening hour for #{shop5.name}"
@@ -104,6 +109,7 @@ puts "Opening hour for #{shop5.name}"
   OpeningHour.create(shop_id: shop5.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "19:00")
   OpeningHour.create(shop_id: shop5.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "19:00")
   OpeningHour.create(shop_id: shop5.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "19:00")
+  OpeningHour.create(shop_id: shop5.id, day: "Sunday", closed: true)
   # OpeningHour.create(shop_id: shop5.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00
 puts "Opening & closing hours for #{shop5.name} done!"
 
@@ -111,6 +117,7 @@ puts "Opening hour for #{shop6.name}"
   OpeningHour.create(shop_id: shop6.id, day: "Monday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop6.id, day: "Tuesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   # OpeningHour.create(shop_id: shop6.id, day: "Wednesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
+  OpeningHour.create(shop_id: shop6.id, day: "Wednesday", closed: true)
   OpeningHour.create(shop_id: shop6.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop6.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop6.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
@@ -136,22 +143,26 @@ puts "Opening & closing hours for #{shop7.name} done!"
 
 puts "Opening hour for #{shop8.name}"
   # OpeningHour.create(shop_id: shop8.id, day: "Monday", starts_am_at: "10:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop1.id, day: "Monday", closed: true)
   OpeningHour.create(shop_id: shop8.id, day: "Tuesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Wednesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   # OpeningHour.create(shop_id: shop8.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop8.id, day: "Sunday", closed: true)
 puts "Opening & closing hours for #{shop8.name} done!"
 
 puts "Opening hour for #{shop9.name}"
   OpeningHour.create(shop_id: shop9.id, day: "Monday", starts_am_at: "11:00", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Tuesday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   # OpeningHour.create(shop_id: shop9.id, day: "Wednesday", starts_am_at: "11:30", ends_am_at: "13:30")
+  OpeningHour.create(shop_id: shop8.id, day: "Wednesday", closed: true)
   OpeningHour.create(shop_id: shop9.id, day: "Thursday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Friday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Saturday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   # OpeningHour.create(shop_id: shop9.id, day: "Sunday", starts_am_at: "11:30", ends_am_at: "13:30")
+  OpeningHour.create(shop_id: shop9.id, day: "Sunday", closed: true)
 puts "Opening & closing hours for #{shop9.name} done!"
 
 puts "Opening hour for #{shop10.name}"
@@ -162,16 +173,19 @@ puts "Opening hour for #{shop10.name}"
   OpeningHour.create(shop_id: shop10.id, day: "Friday", starts_am_at: "09:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "19:00")
   OpeningHour.create(shop_id: shop10.id, day: "Saturday", starts_am_at: "09:00", ends_am_at: "19:00")
   # OpeningHour.create(shop_id: shop10.id, day: "Sunday", starts_am_at: "09:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop10.id, day: "Sunday", closed: true)
 puts "Opening & closing hours for #{shop10.name} done!"
 
 puts "Opening hour for #{shop11.name}"
   OpeningHour.create(shop_id: shop11.id, day: "Monday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "14:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop11.id, day: "Tuesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "14:00", ends_pm_at: "20:00")
   # OpeningHour.create(shop_id: shop11.id, day: "Wednesday", starts_am_at: "10:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop11.id, day: "Wednesday", closed: true)
   OpeningHour.create(shop_id: shop11.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "14:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop11.id, day: "Friday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "14:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop11.id, day: "Saturday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "14:00", ends_pm_at: "20:00")
   # OpeningHour.create(shop_id: shop11.id, day: "Sunday", starts_am_at: "10:00", ends_am_at: "13:00")
+  OpeningHour.create(shop_id: shop11.id, day: "Sunday", closed: true)
 puts "Opening & closing hours for #{shop11.name} done!"
 
   puts " Opening and closing hour for 11 shops created done!"
