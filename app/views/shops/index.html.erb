@@ -1,11 +1,23 @@
- <div>
-  <h4> Index de shop </h4>
+ <%= content_for(:navbar_class, "navbar-home") %>
+
+ <div class="banner">
+  <div class="banner-content text-center">
+    <h1>Change your life: learn to Shop!</h1>
+    <p>Le Shoper brings technical skills to creative people</p>
+    <%#= link_to "Start now", new_user_session_path, class: "btn btn-lg btn-primary"  %>
+  </div>
+</div>
+<div class="content">
+  <div class="cards">
     <% @shops.each do |shop| %>
-      <h5> <%= link_to shop_path(shop) do %></h5>
-        <%= shop.name.upcase %>
-        <%# shop.opening_hours.each do |opening_hour| %>
-          <%#= opening_hour.day %>
-        <%# end %>
-      <% end %>
+      <div class="card" style="background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://source.unsplash.com/1600x900/?shop,brand,store)">
+        <%= link_to shop_path(shop) do %>
+          <h4 style="text-align:center"><%= shop.name %></h4>
+          <%# shop.opening_hours.each do |opening_hour| %>
+            <%#= opening_hour.day %>
+          <%# end %>
+        <% end %>
+      </div>
     <% end %>
- </div>
+  </div>
+</div>
