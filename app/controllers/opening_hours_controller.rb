@@ -15,7 +15,7 @@ class OpeningHoursController < ApplicationController
   private
 
   def opening_hour_params
-    params.require(:opening_hour).permit(:shop_id, :day, :starts_at, :ends_at)
+    params.require(:opening_hour).permit(:shop_id, :day, :starts_am_at, :starts_pm_at, :ends_am_at, :ends_pm_at)
   end
 
   def set_shop
