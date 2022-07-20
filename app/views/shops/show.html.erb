@@ -4,43 +4,43 @@
     <% @shop.opening_hours.where(day: "Monday").each do |opening_hour| %>
       <%= opening_hour.day %>
       <%# <% if opening_hour %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Tuesday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Wednesday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Thursday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Friday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Saturday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
   <li>
     <% @shop.opening_hours.where(day: "Sunday").each do |opening_hour| %>
       <%= opening_hour.day %>
-      <%= opening_hour.starts_am_at&.hour %>-<%= opening_hour.ends_am_at&.hour %>, <%= opening_hour.starts_pm_at&.hour %>-<%= opening_hour.ends_pm_at&.hour %>
+      <%= opening_hour.starts_am_at&.strftime("%I:%M") %>-<%= opening_hour.ends_am_at&.strftime("%I:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%I:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%I:%M") %>
     <% end %>
   </li>
 </ul>

@@ -10,46 +10,46 @@ puts "all shops destroyed"
 require 'faker'
 require 'date'
 puts "creating 10 shops"
-  shop_name1 = Faker::Restaurant.name
+  shop_name1 = Faker::Commerce.product_name
   shop1 = Shop.create(name: shop_name1)
   shop1.save!
-  shop_name2 = Faker::Restaurant.name
+  shop_name2 = Faker::Commerce.product_name
   shop2 = Shop.create(name: shop_name2)
   shop2.save!
 
-  shop_name3 = Faker::Restaurant.name
+  shop_name3 = Faker::Commerce.product_name
   shop3 = Shop.create(name: shop_name3)
   shop3.save!
 
-  shop_name4 = Faker::Restaurant.name
+  shop_name4 = Faker::Commerce.product_name
   shop4 = Shop.create(name: shop_name4)
   shop4.save!
 
-  shop_name5 = Faker::Restaurant.name
+  shop_name5 = Faker::Commerce.product_name
   shop5 = Shop.create(name: shop_name5)
   shop5.save!
 
-  shop_name6 = Faker::Restaurant.name
+  shop_name6 = Faker::Commerce.product_name
   shop6 = Shop.create(name: shop_name6)
   shop6.save!
 
-  shop_name7 = Faker::Restaurant.name
+  shop_name7 = Faker::Commerce.product_name
   shop7 = Shop.create(name: shop_name7)
   shop7.save!
 
-  shop_name8 = Faker::Restaurant.name
+  shop_name8 = Faker::Commerce.product_name
   shop8 = Shop.create(name: shop_name8)
   shop8.save!
 
-  shop_name9 = Faker::Restaurant.name
+  shop_name9 = Faker::Commerce.product_name
   shop9 = Shop.create(name: shop_name9)
   shop9.save!
 
-  shop_name10 = Faker::Restaurant.name
+  shop_name10 = Faker::Commerce.product_name
   shop10 = Shop.create(name: shop_name10)
   shop10.save!
 
-  shop_name11 = Faker::Restaurant.name
+  shop_name11 = Faker::Commerce.product_name
   shop11 = Shop.create(name: shop_name11)
   shop11.save!
 puts "11 shops created done!"
