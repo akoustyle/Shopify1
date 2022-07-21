@@ -30,6 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 fr:
+  index:
+    title: "Change your life: learn to Shop!"
+    subtitle: "Le Shoper brings technical skills to creative people"
   activerecord:
     errors:
       messages:

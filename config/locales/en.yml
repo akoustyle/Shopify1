@@ -31,6 +31,9 @@
 
 en:
   hello: "Hello world"
+  index:
+    title: "Change your life: learn to Shop!"
+    subtitle: "Le Shoper brings technical skills to creative peopl"
   activerecord:
     errors:
       messages:

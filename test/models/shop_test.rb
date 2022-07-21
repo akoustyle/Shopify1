@@ -1,4 +1,5 @@
-require "test_helper"
+require_relative "test_helper"
+require_relative "shop"
 
 class ShopTest < ActiveSupport::TestCase
   # test "the truth" do
@@ -9,8 +10,8 @@ class ShopTest < ActiveSupport::TestCase
       expect(Shop.new.type).to eq("Shop")
     end
 
-    it " Name return the capitalized laptop needed " do
-      expect(Shop.new.name).to eq('MacBook')
+    it " Name return the Name needed " do
+      expect(Shop.new.name).to eq('Walmart')
     end
 
   end
