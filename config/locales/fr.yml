@@ -33,7 +33,15 @@ fr:
   index:
     title: "Change your life: learn to Shop!"
     subtitle: "Le Shoper brings technical skills to creative people"
-  activerecord:
+  active_record:
+    Sunday: "Dimanche"
+    Monday: "Lundi"
+    Tuesday: "Mardi"
+    Wednesday: "Mercredi"
+    Thursday: "Jeudi"
+    Friday: "Vendredi"
+    Saturday: "Samedi"
+
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
