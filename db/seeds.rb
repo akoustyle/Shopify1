@@ -143,7 +143,7 @@ puts "Opening & closing hours for #{shop7.name} done!"
 
 puts "Opening hour for #{shop8.name}"
   # OpeningHour.create(shop_id: shop8.id, day: "Monday", starts_am_at: "10:00", ends_am_at: "13:00")
-  OpeningHour.create(shop_id: shop1.id, day: "Monday", closed: true)
+  OpeningHour.create(shop_id: shop8.id, day: "Monday", closed: true)
   OpeningHour.create(shop_id: shop8.id, day: "Tuesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Wednesday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
   OpeningHour.create(shop_id: shop8.id, day: "Thursday", starts_am_at: "10:00", ends_am_at: "13:00", starts_pm_at: "15:00", ends_pm_at: "20:00")
@@ -157,7 +157,7 @@ puts "Opening hour for #{shop9.name}"
   OpeningHour.create(shop_id: shop9.id, day: "Monday", starts_am_at: "11:00", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Tuesday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   # OpeningHour.create(shop_id: shop9.id, day: "Wednesday", starts_am_at: "11:30", ends_am_at: "13:30")
-  OpeningHour.create(shop_id: shop8.id, day: "Wednesday", closed: true)
+  OpeningHour.create(shop_id: shop9.id, day: "Wednesday", closed: true)
   OpeningHour.create(shop_id: shop9.id, day: "Thursday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Friday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
   OpeningHour.create(shop_id: shop9.id, day: "Saturday", starts_am_at: "11:30", ends_am_at: "13:30", starts_pm_at: "15:30", ends_pm_at: "20:30")
