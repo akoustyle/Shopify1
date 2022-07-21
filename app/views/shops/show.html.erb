@@ -3,15 +3,15 @@
 </div>
 <div class="container" style="display:flex">
   <div>
-    <span style="font-weight:bold">Horaires&ensp;:&emsp;</span>
+    <span style="font-weight:bold">Schedule&ensp;:&thinsp;</span>
   </div>
-  <table>
+  <table id="shop">
     <% OpeningHour.week_days_from_today.each_with_index do |day, i| %>
       <% if i == 0 %>
       <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
         <% if !opening_hour.closed? %>
           <tr>
-            <th><%= opening_hour.day %></th>
+            <th><%= opening_hour.day %>&ensp;</th>
             <th><%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>,</th>
             <th><%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></th>
           </tr>
@@ -26,7 +26,7 @@
         <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
           <% if !opening_hour.closed? %>
             <tr>
-              <td><%= opening_hour.day %></td>
+              <td><%= opening_hour.day %>&ensp;</td>
               <td><%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>,</td>
               <td><%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></td>
             </tr>
