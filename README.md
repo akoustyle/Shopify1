@@ -50,4 +50,4 @@ Quoi qu'il en soit, on aura l'occasion de se parler du code que je vous propose,
 ---
 Bonne visite !
 
-> Merci pour l'opportunités, le test était bien fun à faire et je pense continuer de le pimper! si besoin de plus d'info: ✉️ maoukola.oneal@gmail.com
+> Merci pour l'opportunité, le test était bien fun à faire et je pense continuer de le pimper! si besoin de plus d'info: ✉️ maoukola.oneal@gmail.com
