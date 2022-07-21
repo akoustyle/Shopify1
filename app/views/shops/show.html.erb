@@ -3,37 +3,40 @@
 </div>
 <div class="container" style="display:flex">
   <div>
-    <span style="font-weight:bold">Horaires:</span>
+    <span style="font-weight:bold">Horaires&ensp;:&emsp;</span>
   </div>
-  <div>
-      <% OpeningHour.week_days_from_today.each_with_index do |day, i| %>
-        <% if i == 0 %>
-        <% @shop.opening_hours.where(day: t(day)).each do |opening_hour| %>
-          <% if !opening_hour.closed? %>
-          <li style="list-style-type: none">
-            <span style="font-weight:bold"><%= opening_hour.day %>
-            <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></span>
-          </li>
-          <% else %>
-            <li style="list-style-type: none">
-              <span style="font-weight:bold"><%= opening_hour.day %> Closed </span>
-            </li>
-          <% end %>
-        <% end %>
+  <table>
+    <% OpeningHour.week_days_from_today.each_with_index do |day, i| %>
+      <% if i == 0 %>
+      <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
+        <% if !opening_hour.closed? %>
+          <tr>
+            <th><%= opening_hour.day %></th>
+            <th><%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>,</th>
+            <th><%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></th>
+          </tr>
         <% else %>
-          <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
-            <% if !opening_hour.closed? %>
-            <li style="list-style-type: none">
-              <%= opening_hour.day %>
-              <%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>, <%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %>
-            </li>
-            <% else%>
-              <li style="list-style-type: none">
-                <%= opening_hour.day %> Closed
-              </li>
-            <% end %>
+          <tr>
+            <th><%= opening_hour.day %>&ensp;</th>
+            <th>Closed</th>
+          </tr>
+        <% end %>
+      <% end %>
+      <% else %>
+        <% @shop.opening_hours.where(day: day).each do |opening_hour| %>
+          <% if !opening_hour.closed? %>
+            <tr>
+              <td><%= opening_hour.day %></td>
+              <td><%= opening_hour.starts_am_at&.strftime("%H:%M") %>-<%= opening_hour.ends_am_at&.strftime("%H:%M") %>,</td>
+              <td><%= opening_hour.starts_pm_at&.strftime("%H:%M") %>-<%= opening_hour.ends_pm_at&.strftime("%H:%M") %></td>
+            </tr>
+          <% else %>
+            <tr>
+              <td><%= opening_hour.day %>&ensp;</td>
+              <td>Closed</td>
+            </tr>
           <% end %>
         <% end %>
-
       <% end %>
-</div>
+    <% end %>
+  </table>
