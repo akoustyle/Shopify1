@@ -1,4 +1,3 @@
- <%= content_for(:navbar_class, "navbar-home") %>
 
  <div class="banner">
   <div class="banner-content text-center">
@@ -12,7 +11,7 @@
     <% @shops.each do |shop| %>
       <%= link_to shop_path(shop) do %>
         <div class="card" style="background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://source.unsplash.com/1600x900/?shop,brand,store)">
-          <h3 style="text-align:center"><%= shop.name %></h3>
+          <h3 style="text-align:center;font-weight:bolder;font-family:varela round,sans serif;"><%= shop.name %></h3>
           <%# shop.opening_hours.each do |opening_hour| %>
             <%#= opening_hour.day %>
           <%# end %>
