@@ -47,6 +47,12 @@ en:
       Thursday: "Thursday"
       Friday: "Friday"
       Saturday: "Saturday"
+  navbar:
+    title1: "Shop clever"
+    title2: "Shop faster"
+    title3: "Sunday Shop"
+    title4: "Shop Magazin"
+    logout: "Logout"
   activerecord:
     errors:
       messages:

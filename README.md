@@ -42,7 +42,7 @@ Quoi qu'il en soit, on aura l'occasion de se parler du code que je vous propose,
 
 1️⃣ En [**Prérequis**] j'ai crée une application Ruby on rails avec un model **Shop** 😉.
 
-2️⃣ L'[**Exercice 1**] j'ai crée un model **OpeningHour** qui belongs_to Shop. Ce model prend comme attribut: **starts_am_at**, **starts_pm_at**, **ends_am_at**, **ends_pm_at**, **day** et un boolean **closed**. J'ai aussi codé une methode de class qui permet de créer un array des jours de la semaine avec en array[0] le current_day. Grace a une **top seed** j'ai créer 11 shops qui ont chacun leurs heures d'ouvertures, de fermetures et leurs jours de fermeture. Toutes les infos sont stocker dans la data base Active record.
+2️⃣ L'[**Exercice 1**] j'ai crée un model **OpeningHour** qui belongs_to Shop. Ce model prend comme attribut: **starts_am_at**, **starts_pm_at**, **ends_am_at**, **ends_pm_at**, **day** et un boolean **closed**. J'ai aussi codé une methode de class qui permet de créer un array des jours de la semaine avec en array[0] le current_day. Grâce a une **top seed** j'ai crée 11 shops qui ont chacun leurs heures d'ouvertures, de fermetures et leurs jours de fermeture. Toutes les infos sont stockés dans la data base Active record.
 
 
 3️⃣ Pour l'[**Exercice 2**] j'ai crée une page index et une page show pour le model Shop, j'ai ajouté un peu de design pour une meilleure experience utilisateur!!!😉
