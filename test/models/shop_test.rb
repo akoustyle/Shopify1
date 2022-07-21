@@ -6,13 +6,15 @@ class ShopTest < ActiveSupport::TestCase
   #   assert true
   # end
   describe Shop do
-    it " type return Shop" do
-      expect(Shop.new.type).to eq("Shop")
+    it "should return the name of the Shop" do
+      shop = Shop.new({name: "Nike"})
+      expect(shop.name).to eq("Nike")
     end
 
-    it " Name return the Name needed " do
-      expect(Shop.new.name).to eq('Walmart')
+    it "should be initialized with a name" do
+    properties = { name: "Nike" }
+    shop = Shop.new(properties)
+    expect(shop).to be_a(Shop)
     end
-
   end
 end
