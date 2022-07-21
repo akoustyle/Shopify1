@@ -30,7 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 fr:
-  activerecord:
+  active_record:
+    Sunday: "Dimanche"
+    Monday: "Lundi"
+    Tuesday: "Mardi"
+    Wednesday: "Mercredi"
+    Thursday: "Jeudi"
+    Friday: "Vendredi"
+    Saturday: "Samedi"
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
