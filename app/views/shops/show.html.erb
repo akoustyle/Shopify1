@@ -1,17 +1,17 @@
 
 <div class="banner2">
   <div class="banner-content text-center">
-    <h1>Time to Shop at <%= @shop.name %>!</h1>
+    <h1> <%= t('show.banner', banner: @shop.name)%>!</h1>
     <%# <p>Le Shoper brings technical skills to creative people</p> %>
     <%#= link_to "Start now", new_user_session_path, class: "btn btn-lg btn-primary"  %>
   </div>
 </div>
 <div class="container" style="margin-top:90px">
-  <h4 style="color:black"><strong>Opening Hours for <%= @shop.name %></strong></h4>
+  <h4 style="color:black"><strong><%= t('show.title', shop: @shop.name) %></strong></h4>
 </div>
 <div class="container" style="display:flex">
   <div>
-    <span style="font-weight:bold">Schedule&ensp;:&thinsp;</span>
+    <span style="font-weight:bold"><%= t('show.schedule') %> &ensp;:&thinsp;</span>
   </div>
   <table id="shop">
     <% OpeningHour.week_days_from_today.each_with_index do |day, i| %>
@@ -26,7 +26,7 @@
         <% else %>
           <tr>
             <th><%= opening_hour.day %>&ensp;</th>
-            <th>Closed</th>
+            <th><%= t('show.closed') %></th>
           </tr>
         <% end %>
       <% end %>
@@ -41,11 +41,14 @@
           <% else %>
             <tr>
               <td><%= opening_hour.day %>&ensp;</td>
-              <td>Closed</td>
+              <td><%= t('show.closed') %></td>
             </tr>
           <% end %>
         <% end %>
       <% end %>
     <% end %>
   </table>
+  <%= link_to root_path do %>
+    <i class="fas fa-undo"></i>
+  <% end %>
 </div>

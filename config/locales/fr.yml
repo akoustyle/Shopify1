@@ -33,6 +33,11 @@ fr:
   index:
     title: "Change your life: learn to Shop!"
     subtitle: "Le Shoper brings technical skills to creative people"
+  show:
+    banner: "Time to shop at %{banner}"
+    title: "Horaires pour %{shop}"
+    schedule: "Horaires"
+    closed: "Fermé"
   active_record:
     Sunday: "Dimanche"
     Monday: "Lundi"
@@ -41,6 +46,13 @@ fr:
     Thursday: "Jeudi"
     Friday: "Vendredi"
     Saturday: "Samedi"
+  navbar:
+    title1: "Shop clever"
+    title2: "Shop faster"
+    title3: "Sunday Shop"
+    title4: "Shop Magazin"
+    logout: "Logout"
+
 
     errors:
       messages:

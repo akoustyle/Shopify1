@@ -34,6 +34,19 @@ en:
   index:
     title: "Change your life: learn to Shop!"
     subtitle: "Le Shoper brings technical skills to creative peopl"
+  show:
+    banner: "Time to Shop at %{banner}"
+    title: "Opening hours for %{shop}"
+    schedule: "Schedule"
+    closed: "Closed"
+    active_record:
+      Sunday: "Sunday"
+      Monday: "Monday"
+      Tuesday: "Tuesday"
+      Wednesday: "Wednesday"
+      Thursday: "Thursday"
+      Friday: "Friday"
+      Saturday: "Saturday"
   activerecord:
     errors:
       messages:
