@@ -1,7 +1,7 @@
 class ShopsController < ApplicationController
  before_action :set_shop, only: :show
   def index
-    @shops = Shop.all.order(name: :asc)
+    @shops = Shop.all.order(starts_am_at: :asc)
   end
   def new
     @shop = Shop.new

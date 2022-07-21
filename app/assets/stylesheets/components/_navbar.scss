@@ -1,11 +1,23 @@
-.navbar-home {
-  position: absolute;
-  width: 100%;
-  background: transparent;
-  box-shadow: none;
+.navbar-lewagon {
+  justify-content: space-between;
+background-color: transparent;
+  transition: 0.5s background-color ease;
+}
 
-  .navbar-wagon-link {
-    color: white;
-    font-weight: bold;
-  }
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 60px;
+}
+
+.navbar-home {
+  /* [...] */
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
 }

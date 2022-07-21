@@ -7,10 +7,45 @@
   background-size: cover;
   background-position: center;
 
-  h1 {
+  h1, h2, h3, h4 {
     color: white;
     font-weight: bold;
     font-size: 45px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+  }
+
+  p {
+    color: white;
+    opacity: .8;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 15px 50px;
+  }
+}
+
+.banner2 {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/1600x900/?shop");
+  background-size: cover;
+  background-position: center;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
   }
 
   p {

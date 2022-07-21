@@ -1,51 +1,10 @@
-$gray: #F4F4F4; // Defining a variable
-$spacer: 8px;
-
 body {
   margin: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  background: $gray;;
-}
-
-p {
-  color: white;
-  opacity: .8;
-  font-size: 25px;
-  font-weight: lighter;
-  margin-bottom: 30px;
-  padding: $spacer ($spacer * 3);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Varela Round', sans-serif;
-  font-weight: bold;
-  color:white;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 23px;
-}
-h4 {
-  font-size: 20px;
+  background: #F4F4F4;
 }
 
 a {
-  color: grey;
-
-  &:hover {
-    color: black;
-  }
+  text-decoration: none;
 }
