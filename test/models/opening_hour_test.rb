@@ -1,4 +1,5 @@
-require "test_helper"
+require_relative "test_helper"
+require_relative "opening_hour"
 
 class OpeningHourTest < ActiveSupport::TestCase
   # test "the truth" do
@@ -8,7 +9,6 @@ class OpeningHourTest < ActiveSupport::TestCase
     it "date method return an array of days" do
       expect(OpeningHour.new.week_days_from_today).to eq(Arraay)
     end
-  end
 
     it "Shop is closed return false " do
       expect(OpeningHour.new.closed?).to be false
@@ -21,5 +21,5 @@ class OpeningHourTest < ActiveSupport::TestCase
     it "Day method return a Day object" do
       expect(OpeningHour.new.day).to eq(Day.new)
     end
-
+  end
 end
